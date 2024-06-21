@@ -1,0 +1,25 @@
+name: Main Branch CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Create Roll Number File
+        run: echo "Praveen" > 21alr033.txt
+
+      - name: Print Current Working Directory
+        run: pwd
+
+      - name: List All Files and Directories
+        run: ls -al
+
+      - name: Display Current Date and Time
+        run: date
